@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Exam Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="exam-container">
+        <header>
+            <h1>SSC CGL Mock Test</h1>
+        </header>
+        
+        <div class="exam-box">
+            <div class="question-box">
+                <h2 id="question-number"></h2>
+                <p id="question-text"></p>
+                <div class="options">
+                    <button class="option" onclick="selectOption(0)">A</button>
+                    <button class="option" onclick="selectOption(1)">B</button>
+                    <button class="option" onclick="selectOption(2)">C</button>
+                    <button class="option" onclick="selectOption(3)">D</button>
+                </div>
+            </div>
+
+            <div class="timer-box">
+                <h3>Time Left: <span id="timer">60</span>s</h3>
+            </div>
+
+            <div class="nav-buttons">
+                <button onclick="prevQuestion()">Previous</button>
+                <button onclick="nextQuestion()">Next</button>
+                <button onclick="submitExam()">Submit</button>
+            </div>
+        </div>
+
+        <div id="result-container" style="display:none;">
+            <h2>Exam Completed!</h2>
+            <canvas id="score-chart"></canvas>
+        </div>
+    </div>
+</body>
+</html>
